@@ -4,6 +4,14 @@ document.getElementById('btn-diposite').addEventListener('click' ,function(){
     const dipositeField= document.getElementById('diposite-field');
     const dipositeAmountString=dipositeField.value;
     const dipositeAmount=parseFloat(dipositeAmountString);
+
+    //  Clear The Diposite Field
+    dipositeField.value='';
+    // check NAN
+    if(isNaN(dipositeAmount)){
+        alert('Please input Number');
+        return
+    }
     
     //3 get Diposite Total Amount
      const dipositeElement=document.getElementById('disposite-amount');
@@ -23,7 +31,6 @@ document.getElementById('btn-diposite').addEventListener('click' ,function(){
     totalAmount.innerText=currenttotalBalance;
     // 6 Calculate Total Balance
 
-    //  Clear The Diposite Field
-    dipositeField.value='';
+    
 
 });

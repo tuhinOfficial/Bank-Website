@@ -5,6 +5,14 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const withdrawString= withdraw.value;
     const withdrawAmount= parseFloat(withdrawString);
 
+    withdraw.value='';
+    
+    // check NAN
+    if(isNaN(withdrawAmount)){
+        alert('Please input Number');
+        return
+    }
+
     //3 Get Withdraw Balance
     const withdrawbalanceString= document.getElementById('withdraw-amount');
     const currentWithdrawAmount=withdrawbalanceString.innerText;
@@ -24,5 +32,5 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const currentTotal= totalbalance-withdrawAmount;
     totalAmount.innerText= currentTotal;
     
-    withdraw.value ='';
+    
 })
