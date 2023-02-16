@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Inside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="mt-9 mb-12">
+        <h1 class="text-center text-5xl font-semibold">Welcome To Your <span class="text-amber-500">Dashboard</span></h1>
+    </header>
+
+    <main>
+        <section class="w-4/6 mx-auto text-white grid grid-cols-3 gap-8 py-20 px-24"  >
+            <div class="bg-green-400 px-4 py-5 text-center">
+                <h4 class="text-2xl font-extrabold mb-2">Diposite</h4>
+                <h2 class="text-3xl">$<span id="disposite-amount">00</span></h2>
+            </div>
+            <div class="bg-red-400 px-4 py-5 text-center">
+                <h4 class="text-2xl font-extrabold mb-2">Withdraw</h4>
+                <h2 class="text-3xl">$<span id="withdraw-amount">00</span></h2>
+            </div>
+            <div class="bg-blue-400 px-4 py-5 text-center">
+                <h4 class="text-2xl font-extrabold mb-2">Balance</h4>
+                <h2 class="text-3xl">$<span id="total-amount">00</span></h2>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 gap-8 w-4/6 mx-auto">
+            <div class="bg-lime-500 px-4 py-8">
+                <h1 class="text-2xl text-white font-bold text-center mb-3">Diposit Here</h1>
+                <input id="diposite-field" onkeydown="javascript: return event.keyCode == 69 ? false : true" class="block w-3/4 rounded-md py-2 px-2 mx-auto mb-4 " type="number" name="" id="" placeholder="Enter Your Amount Here">
+                <button id="btn-diposite" class="block bg-blue-500 text-white px-4 py-2 font-semibold mx-auto rounded-md hover:opacity-80">Diposit</button>
+            </div>
+
+            <div class="bg-green-500 px-4 py-8">
+                <h1 class="text-2xl text-white font-bold text-center mb-3">WithDraw Here</h1>
+                <input id="withdraw-field" onkeydown="javascript: return event.keyCode == 69 ? false : true" class="block w-3/4 rounded-md py-2 px-2 mx-auto mb-4 " type="number" name="" id="" placeholder="Enter Your Amount Here">
+                <button id="btn-withdraw" class="block bg-violet-500 text-white px-4 py-2 font-semibold mx-auto rounded-md hover:opacity-80">WithDraw</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/diposite.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
